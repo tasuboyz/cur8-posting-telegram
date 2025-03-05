@@ -201,6 +201,25 @@ export const fr = {
 
     // Community errors
     error_loading_community: "Une erreur s'est produite lors de la recherche de communauté",
-    confirm_post: "Votre publication est prête à être publiée"
+    confirm_post: "Votre publication est prête à être publiée",
+
+    // Account creation
+    create_account: "Créer un Compte",
+    account_name: "Nom du Compte",
+    enter_account_name: "Entrez le nom du compte",
+    account_name_requirements: "Le nom du compte ne peut contenir que des lettres minuscules, des chiffres, des points et des traits d'union",
+    creating_account: "Création du compte en cours...",
+    account_created_success: "Compte Créé avec Succès",
+    keys: "Clés",
+    active_key: "Clé Active",
+    master_key: "Clé Maître",
+    memo_key: "Clé Mémo",
+    owner_key: "Clé Propriétaire",
+    posting_key: "Clé de Publication",
+    download_pdf: "Télécharger les Clés en PDF",
+    copied_to_clipboard: "Copié dans le presse-papiers",
+    click_to_copy: "Cliquez pour copier dans le presse-papiers",
+    failed_create_account: "Échec de la création du compte",
+    account_name_exists: "Ce nom de compte existe déjà"
 }
     ;

@@ -138,11 +138,11 @@ export const uk = {
     schedule_time: "Час",
     scheduled_for: "Заплановано на {date}",
     reschedule: "Перепланувати",
-    unschedule: "Скасувати п��анування",
+    unschedule: "Скасувати планування",
 
     // Draft management
     draft_list_title: "Ваші чернетки",
-    draft_loading: "Завантаження черн��ток...",
+    draft_loading: "Завантаження чернеток...",
     draft_empty: "У вас немає чернеток",
     draft_filter: "Фільтрувати чернетки",
     draft_sort: "Сортувати за",
@@ -195,6 +195,24 @@ export const uk = {
 
     // Community errors
     error_loading_community: "Помилка завантаження спільноти",
-    confirm_post://Your post is ready to be published
-    "Ваш пост готовий до публікації"
+    confirm_post: "Ваш пост готовий до публікації",
+
+    // Account creation
+    create_account: "Створити акаунт",
+    account_name: "Ім'я акаунту",
+    enter_account_name: "Введіть ім'я акаунту",
+    account_name_requirements: "Ім'я акаунту може містити лише малі літери, цифри, крапки та дефіси",
+    creating_account: "Створення акаунту...",
+    account_created_success: "Акаунт успішно створено",
+    keys: "Ключі",
+    active_key: "Активний ключ",
+    master_key: "Майстер-ключ",
+    memo_key: "Ключ для нотаток",
+    owner_key: "Ключ власника",
+    posting_key: "Ключ для публікацій",
+    download_pdf: "Завантажити ключі як PDF",
+    copied_to_clipboard: "Скопійовано до буфера обміну",
+    click_to_copy: "Натисніть, щоб скопіювати до буфера обміну",
+    failed_create_account: "Не вдалося створити акаунт",
+    account_name_exists: "Це ім'я акаунту вже існує"
 };

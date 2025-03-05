@@ -23,7 +23,7 @@ export const hi = {
     post_save_draft: "सहेजें",
 
     // Post validation messages
-    post_title_required: "पोस्ट का शीर्षक ���वश्यक है",
+    post_title_required: "पोस्ट का शीर्षक आवश्यक है",
     post_body_required: "पोस्ट की सामग्री आवश्यक है",
     post_tags_required: "कम से कम एक टैग आवश्यक है",
     schedule_past_date_error: "निर्धारित तिथि अतीत में नहीं हो सकती",
@@ -63,7 +63,7 @@ export const hi = {
     account_manager: "खाता प्रबंधक",
     add_account: "खाता जोड़ें",
     account_selected: "{username} खाता चुना गया",
-    confirm_logout: "लॉगआउट क�� पुष्टि करें",
+    confirm_logout: "लॉगआउट की पुष्टि करें",
     logout_question: "क्या आप वाकई लॉगआउट करना चाहते हैं?",
     logout_successful: "सफलतापूर्वक लॉगआउट हुआ",
 
@@ -195,7 +195,24 @@ export const hi = {
 
     // Community errors
     error_loading_community: "समुदाय खोजने में त्रुटि हुई",
-    confirm_post://Your post is ready to be published
-    "क्या आप वाकई इस पोस्ट को प्रकाशित करना चाहते हैं?"
+    confirm_post: "क्या आप वाकई इस पोस्ट को प्रकाशित करना चाहते हैं?",
 
+    // Account creation
+    create_account: "खाता बनाएं",
+    account_name: "खाते का नाम",
+    enter_account_name: "खाते का नाम दर्ज करें",
+    account_name_requirements: "खाते के नाम में केवल छोटे अक्षर, संख्याएं, बिंदु और हाइफ़न हो सकते हैं",
+    creating_account: "खाता बनाया जा रहा है...",
+    account_created_success: "खाता सफलतापूर्वक बनाया गया",
+    keys: "कुंजियां",
+    active_key: "सक्रिय कुंजी",
+    master_key: "मास्टर कुंजी",
+    memo_key: "मेमो कुंजी",
+    owner_key: "मालिक कुंजी",
+    posting_key: "पोस्टिंग कुंजी",
+    download_pdf: "कुंजियों को PDF के रूप में डाउनलोड करें",
+    copied_to_clipboard: "क्लिपबोर्ड पर कॉपी किया गया",
+    click_to_copy: "क्लिपबोर्ड पर कॉपी करने के लिए क्लिक करें",
+    failed_create_account: "खाता बनाने में विफल",
+    account_name_exists: "यह खाता नाम पहले से मौजूद है"
 };

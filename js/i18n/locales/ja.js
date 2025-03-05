@@ -57,14 +57,14 @@ export const ja = {
 
     // Messages
     msg_success: "成功",
-    msg_error: "���ラー",
+    msg_error: "エラー",
 
     // Account page
     account_manager: "アカウント管理",
     add_account: "アカウントを追加",
     account_selected: "{username} アカウントが選択されました",
     confirm_logout: "ログアウト確認",
-    logout_question: "ログアウトしてもよろしいで���か？",
+    logout_question: "ログアウトしてもよろしいですか？",
     logout_successful: "ログアウトしました",
 
     // Post form
@@ -195,6 +195,24 @@ export const ja = {
 
     // Community errors
     error_loading_community: "コミュニティの読み込み中にエラーが発生しました",
-    confirm_post://Your post is ready to be published
-    "この投稿を公開する準備ができました"
+    confirm_post: "この投稿を公開する準備ができました",
+
+    // Account creation
+    create_account: "アカウントを作成",
+    account_name: "アカウント名",
+    enter_account_name: "アカウント名を入力",
+    account_name_requirements: "アカウント名は小文字、数字、ドット、ハイフンのみを含むことができます",
+    creating_account: "アカウントを作成中...",
+    account_created_success: "アカウントが正常に作成されました",
+    keys: "キー",
+    active_key: "アクティブキー",
+    master_key: "マスターキー",
+    memo_key: "メモキー",
+    owner_key: "オーナーキー",
+    posting_key: "投稿キー",
+    download_pdf: "キーをPDFでダウンロード",
+    copied_to_clipboard: "クリップボードにコピーしました",
+    click_to_copy: "クリックしてクリップボードにコピー",
+    failed_create_account: "アカウントの作成に失敗しました",
+    account_name_exists: "このアカウント名は既に存在します"
 }

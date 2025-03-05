@@ -200,6 +200,24 @@ export const de = {
 
     // Community errors
     error_loading_community: "Fehler beim Laden der Community",
-    confirm_post: //"Il tuo post è pronto per essere pubblicato 
-    "Ihr Beitrag ist bereit zur Veröffentlichung"
+    confirm_post: "Ihr Beitrag ist bereit zur Veröffentlichung",
+
+    // Account creation
+    create_account: "Konto erstellen",
+    account_name: "Kontoname",
+    enter_account_name: "Geben Sie den Kontonamen ein",
+    account_name_requirements: "Der Kontoname darf nur Kleinbuchstaben, Zahlen, Punkte und Bindestriche enthalten",
+    creating_account: "Konto wird erstellt...",
+    account_created_success: "Konto erfolgreich erstellt",
+    keys: "Schlüssel",
+    active_key: "Aktiver Schlüssel",
+    master_key: "Master-Schlüssel",
+    memo_key: "Memo-Schlüssel",
+    owner_key: "Eigentümer-Schlüssel",
+    posting_key: "Posting-Schlüssel",
+    download_pdf: "Schlüssel als PDF herunterladen",
+    copied_to_clipboard: "In die Zwischenablage kopiert",
+    click_to_copy: "Klicken zum Kopieren in die Zwischenablage",
+    failed_create_account: "Kontoerstellung fehlgeschlagen",
+    account_name_exists: "Dieser Kontoname existiert bereits"
 };

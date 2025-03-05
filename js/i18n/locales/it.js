@@ -200,5 +200,24 @@ export const it = {
     close: "Chiudi",
 
     // Community errors
-    error_loading_community: "Errore durante la ricerca della community"
+    error_loading_community: "Errore durante la ricerca della community",
+
+    // Account creation
+    create_account: "Crea Account",
+    account_name: "Nome Account",
+    enter_account_name: "Inserisci il nome dell'account",
+    account_name_requirements: "Il nome dell'account può contenere solo lettere minuscole, numeri, punti e trattini",
+    creating_account: "Creazione account in corso...",
+    account_created_success: "Account Creato con Successo",
+    keys: "Chiavi",
+    active_key: "Chiave Attiva",
+    master_key: "Chiave Master",
+    memo_key: "Chiave Memo",
+    owner_key: "Chiave Proprietario",
+    posting_key: "Chiave di Pubblicazione",
+    download_pdf: "Scarica Chiavi come PDF",
+    copied_to_clipboard: "Copiato negli appunti",
+    click_to_copy: "Clicca per copiare negli appunti",
+    failed_create_account: "Creazione account fallita",
+    account_name_exists: "Questo nome account esiste già"
 };

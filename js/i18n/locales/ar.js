@@ -195,5 +195,24 @@ export const ar = {        // Navigation
     close: "إغلاق",
 
     // Community errors
-    error_loading_community: "خطأ في تحميل المجتمع"
+    error_loading_community: "خطأ في تحميل المجتمع",
+
+    // Account creation
+    create_account: "إنشاء حساب",
+    account_name: "اسم الحساب",
+    enter_account_name: "أدخل اسم الحساب",
+    account_name_requirements: "يمكن أن يحتوي اسم الحساب على أحرف صغيرة وأرقام ونقاط وشرطات فقط",
+    creating_account: "جاري إنشاء الحساب...",
+    account_created_success: "تم إنشاء الحساب بنجاح",
+    keys: "المفاتيح",
+    active_key: "المفتاح النشط",
+    master_key: "المفتاح الرئيسي",
+    memo_key: "مفتاح المذكرة",
+    owner_key: "مفتاح المالك",
+    posting_key: "مفتاح النشر",
+    download_pdf: "تنزيل المفاتيح كملف PDF",
+    copied_to_clipboard: "تم النسخ إلى الحافظة",
+    click_to_copy: "انقر للنسخ إلى الحافظة",
+    failed_create_account: "فشل إنشاء الحساب",
+    account_name_exists: "اسم الحساب هذا موجود بالفعل"
 };

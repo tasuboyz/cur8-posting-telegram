@@ -203,4 +203,23 @@ export const en = {
     error_loading_community: "Error occurred while searching for community",
     confirm_post: //"Il tuo post è pronto per essere pubblicato 
     "Your post is ready to be published",
+
+    // Account creation
+    create_account: "Create Account",
+    account_name: "Account Name",
+    enter_account_name: "Enter account name",
+    account_name_requirements: "Account name can only contain lowercase letters, numbers, dots and hyphens",
+    creating_account: "Creating account...",
+    account_created_success: "Account Created Successfully",
+    keys: "Keys",
+    active_key: "Active Key",
+    master_key: "Master Key",
+    memo_key: "Memo Key",
+    owner_key: "Owner Key",
+    posting_key: "Posting Key",
+    download_pdf: "Download Keys as PDF",
+    copied_to_clipboard: "Copied to clipboard",
+    click_to_copy: "Click to copy to clipboard",
+    failed_create_account: "Failed to create account",
+    account_name_exists: "This account name already exists",
 }

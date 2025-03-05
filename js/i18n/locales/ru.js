@@ -201,6 +201,24 @@ export const ru = {
 
     // Ошибки сообщества
     error_loading_community: "Произошла ошибка при поиске сообщества",
-    confirm_post://Your post is ready to be published
-    "Ваш пост готов к публикации"
+    confirm_post: "Ваш пост готов к публикации",
+
+    // Создание аккаунта
+    create_account: "Создать аккаунт",
+    account_name: "Имя аккаунта",
+    enter_account_name: "Введите имя аккаунта",
+    account_name_requirements: "Имя аккаунта может содержать только строчные буквы, цифры, точки и дефисы",
+    creating_account: "Создание аккаунта...",
+    account_created_success: "Аккаунт успешно создан",
+    keys: "Ключи",
+    active_key: "Активный ключ",
+    master_key: "Мастер-ключ",
+    memo_key: "Ключ для заметок",
+    owner_key: "Ключ владельца",
+    posting_key: "Ключ для публикации",
+    download_pdf: "Скачать ключи в формате PDF",
+    copied_to_clipboard: "Скопировано в буфер обмена",
+    click_to_copy: "Нажмите, чтобы скопировать в буфер обмена",
+    failed_create_account: "Не удалось создать аккаунт",
+    account_name_exists: "Это имя аккаунта уже существует"
 };

@@ -196,7 +196,26 @@ export const es = {
 
     // Community errors
     error_loading_community: "Error al cargar la comunidad",
-    confirm_post: "Tu publicación está lista para ser publicada"
+    confirm_post: "Tu publicación está lista para ser publicada",
+
+    // Account creation
+    create_account: "Crear Cuenta",
+    account_name: "Nombre de Cuenta",
+    enter_account_name: "Introduce el nombre de cuenta",
+    account_name_requirements: "El nombre de cuenta solo puede contener letras minúsculas, números, puntos y guiones",
+    creating_account: "Creando cuenta...",
+    account_created_success: "Cuenta Creada Exitosamente",
+    keys: "Claves",
+    active_key: "Clave Activa",
+    master_key: "Clave Maestra",
+    memo_key: "Clave Memo",
+    owner_key: "Clave de Propietario",
+    posting_key: "Clave de Publicación",
+    download_pdf: "Descargar Claves como PDF",
+    copied_to_clipboard: "Copiado al portapapeles",
+    click_to_copy: "Haz clic para copiar al portapapeles",
+    failed_create_account: "Error al crear la cuenta",
+    account_name_exists: "Este nombre de cuenta ya existe"
 }
 
 

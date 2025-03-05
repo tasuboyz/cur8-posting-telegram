@@ -1,4 +1,3 @@
-
 export const zh = {
     flag: "🇨🇳",
     // Navigation
@@ -196,6 +195,24 @@ export const zh = {
 
     // Community errors
     error_loading_community: "加载社区时出错",
-    confirm_post://Your post is ready to be published
-    "您的帖子已准备好发布"
+    confirm_post: "您的帖子已准备好发布",
+
+    // Account creation
+    create_account: "创建账户",
+    account_name: "账户名",
+    enter_account_name: "输入账户名",
+    account_name_requirements: "账户名只能包含小写字母、数字、点和连字符",
+    creating_account: "正在创建账户...",
+    account_created_success: "账户创建成功",
+    keys: "密钥",
+    active_key: "活动密钥",
+    master_key: "主密钥",
+    memo_key: "备忘密钥",
+    owner_key: "所有者密钥",
+    posting_key: "发布密钥",
+    download_pdf: "将密钥下载为PDF",
+    copied_to_clipboard: "已复制到剪贴板",
+    click_to_copy: "点击复制到剪贴板",
+    failed_create_account: "创建账户失败",
+    account_name_exists: "此账户名已存在"
 };
