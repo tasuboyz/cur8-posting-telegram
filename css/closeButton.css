@@ -1,0 +1,12 @@
+.close-button, #closeButton {
+    background: var(--surface);
+    color: var(--on-background);
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    box-shadow: none;
+}
