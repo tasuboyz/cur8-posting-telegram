@@ -5,7 +5,7 @@ import { showPage } from '../services/pageService.js';
 import { appState } from './AppState.js';
 import { setUsernameForImageUpload } from '../api/image-upload.js';
 import { AccountManager } from '../pages/accountListPage.js';
-
+import { showCreateAccountDialog } from '../components/createAccount.js';
 
 class AppInitializer {
     constructor() {
@@ -88,6 +88,10 @@ class AppInitializer {
 
     initializeCreateAccountButton() {
         console.log('Create account button initialization called');
+        const loginPageCreateAccountBtn = document.getElementById('loginPageCreateAccount');
+        if (loginPageCreateAccountBtn) {
+            loginPageCreateAccountBtn.addEventListener('click', showCreateAccountDialog);
+        }
         // const createAccountBtn = document.getElementById('createAccountBtn');
         // if (createAccountBtn) {
         //     createAccountBtn.addEventListener('click', () => this.handleCreateAccount());
