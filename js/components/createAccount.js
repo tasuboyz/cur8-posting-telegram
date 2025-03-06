@@ -48,7 +48,10 @@ function createAccountDialog() {
                 <h3>${t('account_created_success')}</h3>
                 <p>${t('account_name')}: <code id="createdAccountName"></code></p>
                 <div id="keysContent"></div>
-                <button id="downloadPdfBtn" class="action-btn">${t('download_pdf')}</button>
+                <div class="buttons-container">
+                    <button id="downloadPdfBtn" class="action-btn">${t('download_pdf')}</button>
+                    <button id="closeAccountDialogBtn" class="action-btn">${t('dialog_close')}</button>
+                </div>
             </div>
         </div>
     `;
@@ -68,6 +71,12 @@ function createAccountDialog() {
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
         await performAccountCreation(dialog);
+    });
+    
+    // Add close button event listener for the keys container
+    const closeBtn = dialog.querySelector('#closeAccountDialogBtn');
+    closeBtn.addEventListener('click', () => {
+        dialog.remove();
     });
     
     return dialog;
