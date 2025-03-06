@@ -103,6 +103,12 @@ export class ApiClient {
         return this.sendRequest('/create_account', 'POST', { username, posting_key: postingKey });
     }
 
+    createAccount(accountName) {
+        return this.sendRequest('/create_account', 'POST', { 
+            new_account_name: accountName 
+        });
+    }
+
     readAccount(username) {
         return this.sendRequest(`/read_account?username=${username}`, 'GET');
     }

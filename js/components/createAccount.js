@@ -104,27 +104,17 @@ async function performAccountCreation(dialog) {
             throw new Error(t('account_name_exists'));
         }
         
-        const response = await fetch('https://imridd.eu.pythonanywhere.com/api/steem/create_account', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'API-Key': 'your_secret_api_key'
-            },
-            body: JSON.stringify({
-                new_account_name: accountName
-            })
-        });
+        // Use the ApiClient to create the account
+        const result = await apiClient.createAccount(accountName);
         
-        const result = await response.json();
-        
-        if (response.ok && result.keys) {
+        if (result && result.keys) {
             // Hide the form after successful creation
             form.classList.add('hide');
             
             const keysContent = dialog.querySelector('#keysContent');
             dialog.querySelector('#createdAccountName').textContent = accountName;
             keysContent.innerHTML = `
-                <p>${result.message}</p>
+                <p>${result.message || ''}</p>
                 <p><strong>${t('keys')}:</strong></p>
                 <p>${t('active_key')}: <code class="copyable">${result.keys.active_key}</code></p>
                 <p>${t('master_key')}: <code class="copyable">${result.keys.master_key}</code></p>
@@ -138,7 +128,7 @@ async function performAccountCreation(dialog) {
             dialog.accountData = {
                 accountName: accountName,
                 keys: result.keys,
-                message: result.message
+                message: result.message || ''
             };
             
             // Add copy functionality to key codes
@@ -158,7 +148,7 @@ async function performAccountCreation(dialog) {
                 downloadAccountPDF(dialog.accountData);
             });
         } else {
-            throw new Error(result.message || t('failed_create_account'));
+            throw new Error(result.error || t('failed_create_account'));
         }
     } catch (err) {
         error.textContent = err.message;
