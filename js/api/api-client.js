@@ -11,14 +11,22 @@ export class ApiClient {
         const url = new URL(modified_url);
         const params = new URLSearchParams(url.search);
         const platform = params.get('platform');
+        const isDev = params.get('dev') === 'true';
+        
         const baseUrlMap = {
-            'STEEM': 'https://imridd.eu.pythonanywhere.com/api/steem',
-            'HIVE': 'https://imridd.eu.pythonanywhere.com/api/hive',
-            // 'STEEM': 'https://develop-imridd.eu.pythonanywhere.com/api/steem',
-            // 'HIVE': 'https://develop-imridd.eu.pythonanywhere.com/api/hive'
+            production: {
+                'STEEM': 'https://imridd.eu.pythonanywhere.com/api/steem',
+                'HIVE': 'https://imridd.eu.pythonanywhere.com/api/hive'
+            },
+            development: {
+                'STEEM': 'https://develop-imridd.eu.pythonanywhere.com/api/steem',
+                'HIVE': 'https://develop-imridd.eu.pythonanywhere.com/api/hive'
+            }
         };
-        this.baseUrl = baseUrlMap[platform] || (() => {
-            console.error('Invalid start parameter:',platform);
+
+        const environmentUrls = isDev ? baseUrlMap.development : baseUrlMap.production;
+        this.baseUrl = environmentUrls[platform] || (() => {
+            console.error('Invalid start parameter:', platform);
             displayResult(
                 { error: 'Invalid start parameter, please reload the page' },
                 'error',
@@ -101,12 +109,6 @@ export class ApiClient {
 
     createAccount(username, postingKey) {
         return this.sendRequest('/create_account', 'POST', { username, posting_key: postingKey });
-    }
-
-    createAccount(accountName) {
-        return this.sendRequest('/create_account', 'POST', { 
-            new_account_name: accountName 
-        });
     }
 
     readAccount(username) {
