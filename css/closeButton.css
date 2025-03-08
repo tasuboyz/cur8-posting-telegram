@@ -4,9 +4,25 @@
     border: none;
     font-size: 20px;
     cursor: pointer;
-    padding: 5px 10px;
+    padding: 8px 12px;
     position: absolute;
     top: 10px;
     right: 10px;
     box-shadow: none;
+    border-radius: 50%;
+    transition: all 0.2s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+}
+
+.close-button:hover, #closeButton:hover {
+    background: rgba(0,0,0,0.1);
+    transform: scale(1.1);
+}
+
+.close-button:active, #closeButton:active {
+    transform: scale(0.95);
 }

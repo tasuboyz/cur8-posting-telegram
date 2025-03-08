@@ -46,8 +46,22 @@ export class AccountManager {
     createContainer(username) {
         const container = document.createElement('div');
         container.classList.add('container-username');
-        container.appendChild(this.createImageNameContainer(username));
-        container.appendChild(this.createButtonsContainer(username));
+        
+        // Sezione profilo (immagine e nome)
+        const profileSection = document.createElement('div');
+        profileSection.classList.add('profile-section');
+        
+        const img = this.createProfileImage(username);
+        const spanUsername = this.createUsernameElement(username);
+        
+        profileSection.appendChild(img);
+        profileSection.appendChild(spanUsername);
+        
+        // Bottone logout
+        const logoutButton = this.createLogoutButton(username);
+
+        container.appendChild(profileSection);
+        container.appendChild(logoutButton);
 
         container.onclick = () => {
             this.selectAccount(username, container);
@@ -101,9 +115,22 @@ export class AccountManager {
 
     createLogoutButton(username) {
         const logoutButton = document.createElement('button');
-        logoutButton.classList.add('action-btn');
-        logoutButton.innerText = 'Logout';
-        logoutButton.onclick = () => this.handleLogout(username.username);
+        logoutButton.classList.add('logout-button');
+        
+        // Aggiungiamo l'icona di logout
+        const icon = document.createElement('i');
+        icon.classList.add('material-icons');
+        icon.textContent = 'logout';
+        logoutButton.appendChild(icon);
+        
+        const span = document.createElement('span');
+        span.textContent = 'Logout';
+        logoutButton.appendChild(span);
+        
+        logoutButton.onclick = (e) => {
+            e.stopPropagation(); // Previene che il click attivi anche la selezione dell'account
+            this.handleLogout(username.username);
+        };
         return logoutButton;
     }
 

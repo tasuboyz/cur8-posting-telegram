@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="./css/closeButton.css">
     <link rel="stylesheet" href="./css/logo.css">
     <link rel="stylesheet" href="./css/account-creation.css">
+    <link rel="stylesheet" href="./css/accountPage.css">
 </head>
 
 <body>
@@ -94,24 +95,33 @@
             <input type="text" id="postTags" placeholder="insert tags (use commas/spaces to separate)" data-i18n-placeholder="post_tags_placeholder" required>
             <br>
             <div class="buttons-container">
-                <button class="action-btn buttons-containero" id="openComunities">
-                    <span class="button-text" id="comunityName" data-i18n="post_select_community">Select
-                        Community</span>
+                <button class="action-btn community-btn" id="openComunities">
+                    <i class="material-icons">group</i>
+                    <span class="button-text" id="comunityName" data-i18n="post_select_community">Select Community</span>
                 </button>
-                <button class="action-btn-mini primary buttons-containero" id="openDatePicker">
+                <button class="action-btn-mini schedule-btn" id="openDatePicker">
                     <i class="material-icons">schedule</i>
+                    <span class="tooltip">Schedule</span>
                 </button>
-                <button id="previewBtn" class="action-btn-mini success">
+                <button id="previewBtn" class="action-btn-mini preview-btn">
                     <i class="material-icons">visibility</i>
+                    <span class="tooltip">Preview</span>
                 </button>
-                <button id="cancellaBozza" class="action-btn-mini success">
+                <button id="cancellaBozza" class="action-btn-mini delete-btn">
                     <i class="material-icons">delete</i>
+                    <span class="tooltip">Delete</span>
                 </button>
             </div>
         </div>
         <div class="buttons-container-center">
-            <button class="action-btn" id="postToSteem" data-i18n="post_publish_now">Publish Now</button>
-            <button class="action-btn" id="salvaBozza" data-i18n="post_save_draft">Save Draft</button>
+            <button class="action-btn primary-action" id="postToSteem" data-i18n="post_publish_now">
+                <i class="material-icons">publish</i>
+                <span>Publish Now</span>
+            </button>
+            <button class="action-btn secondary-action" id="salvaBozza" data-i18n="post_save_draft">
+                <i class="material-icons">save</i>
+                <span>Save Draft</span>
+            </button>
         </div>
     </div>
     <div id="previewModal" class="modal">
@@ -121,21 +131,17 @@
         </div>
     </div>
 
-    <div id="accountPage" class="page">
-        <div class="header">
+    <div id="accountPage" class="page account-page">
+        <div class="account-header">
             <h2 data-i18n="account_manager">Account Manager</h2>
             <img id="platformLogo" alt="cur8 logo">
-              </div>
+        </div>
         <ul id="accountList"></ul>
         <div class="actions-container">
-            <button class="action-btn loginIn" id="loginInBtn">
-                <i class="material-icons">add</i>
+            <button class="add-account-button" id="loginInBtn">
+                <i class="material-icons">person_add</i>
                 <span data-i18n="add_account">Add Account</span>
             </button>
-            <!-- <button class="action-btn" id="createAccountBtn">
-                <i class="material-icons">person_add</i>
-                <span data-i18n="create_account">Create Account</span>
-            </button> -->
         </div>
     </div>
 
