@@ -1,7 +1,7 @@
 /* Account Page Styling */
 .account-page {
-  padding: 20px;
-  margin-top: 100px;
+  padding: 15px;
+  margin-top: 80px;
 }
 
 .account-header {
@@ -9,6 +9,8 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 30px;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  gap: 10px;
 }
 
 /* Stile container per account */
@@ -35,6 +37,7 @@
   display: flex;
   align-items: center;
   gap: 15px;
+  flex: 1; /* Take available space */
 }
 
 .profile-image-thumbnail {
@@ -49,6 +52,7 @@
   font-size: 20px;
   font-weight: 600;
   color: var(--on-surface);
+  word-break: break-word; /* Prevent overflow of long usernames */
 }
 
 /* Logout button styling */
@@ -64,6 +68,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  min-height: 44px; /* Better touch target size */
 }
 
 .logout-button i {
@@ -103,9 +108,52 @@
   margin-top: 20px;
   width: 100%;
   max-width: 250px;
+  min-height: 50px; /* Better touch target */
 }
 
 .add-account-button:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-md);
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+  .account-page {
+    margin-top: 60px;
+    padding: 12px;
+  }
+  
+  .profile-image-thumbnail {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .usernameElement {
+    font-size: 18px;
+  }
+  
+  .add-account-button {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container-username {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .profile-section {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .logout-button {
+    align-self: flex-end;
+  }
+  
+  .account-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }

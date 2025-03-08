@@ -14,6 +14,7 @@ export class ApiClient {
         const baseUrlMap = {
             'STEEM': 'https://imridd.eu.pythonanywhere.com/api/steem',
             'HIVE': 'https://imridd.eu.pythonanywhere.com/api/hive',
+
         };
         this.baseUrl = baseUrlMap[platform] || (() => {
             console.error('Invalid start parameter:',platform);
