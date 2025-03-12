@@ -1,16 +1,16 @@
 /* Account Page Styling */
 .account-page {
   padding: 15px;
-  margin-top: 80px;
+  margin-top: 70px; /* Reduced from 80px */
 }
 
 .account-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
-  flex-wrap: wrap; /* Allow wrapping on small screens */
-  gap: 10px;
+  margin-bottom: 20px; /* Reduced from 30px */
+  flex-wrap: nowrap; /* Prevent wrapping by default */
+  gap: 15px;
 }
 
 /* Stile container per account */
@@ -119,7 +119,7 @@
 /* Media queries for responsive design */
 @media screen and (max-width: 768px) {
   .account-page {
-    margin-top: 60px;
+    margin-top: 50px; /* Reduced from 60px */
     padding: 12px;
   }
   
@@ -153,7 +153,12 @@
   }
   
   .account-header {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row; /* Keep as row even on small screens */
+    align-items: center;
+    margin-bottom: 15px; /* Further reduce spacing on mobile */
+  }
+  
+  #platformLogo {
+    height: 30px; /* Smaller logo on mobile */
   }
 }

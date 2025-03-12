@@ -856,18 +856,12 @@ input[type="datetime-local"] {
 
 .buttons-container-center {
     display: flex;
-    gap: var(--spacing-md);
-    margin: 20px 0;
-    padding: 10px 0;
+    gap: var(--spacing-sm);
+    margin-top: 10px;
+    flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
-}
-
-.buttons-container-center button {
-    min-width: 160px;
-    height: 50px;
-    font-weight: bold;
-    letter-spacing: 0.8px;
 }
 
 #postTags {
@@ -1164,137 +1158,3 @@ table td {
     flex-direction: column;
     gap: var(--spacing-sm);
 }
-
-/* Miglioramenti ai bottoni principali */
-.primary-action {
-    background-color: var(--success) !important;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease !important;
-}
-
-.primary-action::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
-    transition: all 0.6s ease;
-}
-
-.primary-action:hover::before {
-    left: 100%;
-}
-
-.secondary-action {
-    background-color: var(--secondary-color) !important;
-}
-
-/* Miglioramenti ai bottoni di azione */
-.community-btn {
-    background: linear-gradient(45deg, var(--primary-color), var(--primary-variant)) !important;
-    min-width: 180px;
-}
-
-.community-btn i {
-    margin-right: 8px;
-}
-
-.schedule-btn {
-    background-color: var(--primary-color) !important;
-    position: relative;
-}
-
-.preview-btn {
-    background-color: var(--success) !important;
-    position: relative;
-}
-
-.delete-btn {
-    background-color: var(--error) !important;
-    position: relative;
-}
-
-/* Tooltips per i bottoni mini */
-.action-btn-mini {
-    position: relative;
-}
-
-.tooltip {
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: rgba(0,0,0,0.7);
-    color: white;
-    padding: 4px 8px;
-    border-radius: 4px;
-    font-size: 12px;
-    white-space: nowrap;
-    opacity: 0;
-    visibility: hidden;
-    transition: all 0.3s ease;
-    pointer-events: none;
-}
-
-.action-btn-mini:hover .tooltip {
-    opacity: 1;
-    visibility: visible;
-    bottom: -25px;
-}
-
-/* Effetto pulsazione per i bottoni di azione */
-@keyframes pulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0.7);
-    }
-    70% {
-        box-shadow: 0 0 0 6px rgba(0, 123, 255, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
-    }
-}
-
-.primary-action:focus {
-    animation: pulse 1.5s infinite;
-}
-
-/* Modifica della container dei bottoni principali */
-.buttons-container-center {
-    display: flex;
-    gap: var(--spacing-md);
-    margin: 20px 0;
-    padding: 10px 0;
-    justify-content: center;
-    align-items: center;
-}
-
-.buttons-container-center button {
-    min-width: 160px;
-    height: 50px;
-    font-weight: bold;
-    letter-spacing: 0.8px;
-}
-
-/* Aggiunta di stile coerente per tutte le icone */
-button i.material-icons {
-    font-size: 20px;
-    margin-right: 8px;
-    vertical-align: middle;
-}
-
-.buttons-container {
-    background-color: var(--surface);
-    padding: 15px;
-    border-radius: var(--border-radius-md);
-    margin: 15px 0;
-    box-shadow: var(--shadow-sm);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-}
-
