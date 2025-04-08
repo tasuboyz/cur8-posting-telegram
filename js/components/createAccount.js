@@ -178,20 +178,79 @@ function downloadAccountPDF(accountData) {
  * Generates a PDF with account details
  */
 function generatePDF(data) {
-    const jsPDF = window.jspdf.jsPDF;
-    const doc = new jsPDF();
+    try {
+        const jsPDF = window.jspdf.jsPDF;
+        const doc = new jsPDF();
+        
+        doc.setFontSize(20);
+        doc.text('Steem Account Details', 20, 20);
+        
+        doc.setFontSize(12);
+        doc.text(`Account Name: ${data.accountName}`, 20, 40);
+        doc.text('Keys:', 20, 55);
+        doc.text(`Active Key: ${data.keys.active_key}`, 20, 70);
+        doc.text(`Master Key: ${data.keys.master_key}`, 20, 85);
+        doc.text(`Memo Key: ${data.keys.memo_key}`, 20, 100);
+        doc.text(`Owner Key: ${data.keys.owner_key}`, 20, 115);
+        doc.text(`Posting Key: ${data.keys.posting_key}`, 20, 130);
+
+        // For mobile compatibility, use blob and data URL approach
+        const pdfBlob = doc.output('blob');
+        const pdfUrl = URL.createObjectURL(pdfBlob);
+
+        // Create a temporary link and trigger download
+        const downloadLink = document.createElement('a');
+        downloadLink.href = pdfUrl;
+        downloadLink.download = `steem-account-${data.accountName}.pdf`;
+        downloadLink.style.display = 'none';
+        document.body.appendChild(downloadLink);
+        downloadLink.click();
+
+        // Clean up
+        setTimeout(() => {
+            URL.revokeObjectURL(pdfUrl);
+            document.body.removeChild(downloadLink);
+        }, 100);
+        
+        displayResult({ message: t('pdf_download_started') }, 'success');
+    } catch (error) {
+        console.error("PDF generation error:", error);
+        displayResult({ error: t('pdf_generation_failed') }, 'error');
+        
+        // Fallback: offer text information if PDF fails
+        offerTextDownload(data);
+    }
+}
+
+/**
+ * Fallback function to offer account details as text if PDF fails
+ */
+function offerTextDownload(data) {
+    const textContent = `
+Steem Account Details
+====================
+Account Name: ${data.accountName}
+
+Keys:
+- Active Key: ${data.keys.active_key}
+- Master Key: ${data.keys.master_key}
+- Memo Key: ${data.keys.memo_key}
+- Owner Key: ${data.keys.owner_key}
+- Posting Key: ${data.keys.posting_key}
+    `;
     
-    doc.setFontSize(20);
-    doc.text('Steem Account Details', 20, 20);
+    const textBlob = new Blob([textContent], { type: 'text/plain' });
+    const textUrl = URL.createObjectURL(textBlob);
     
-    doc.setFontSize(12);
-    doc.text(`Account Name: ${data.accountName}`, 20, 40);
-    doc.text('Keys:', 20, 55);
-    doc.text(`Active Key: ${data.keys.active_key}`, 20, 70);
-    doc.text(`Master Key: ${data.keys.master_key}`, 20, 85);
-    doc.text(`Memo Key: ${data.keys.memo_key}`, 20, 100);
-    doc.text(`Owner Key: ${data.keys.owner_key}`, 20, 115);
-    doc.text(`Posting Key: ${data.keys.posting_key}`, 20, 130);
+    const downloadLink = document.createElement('a');
+    downloadLink.href = textUrl;
+    downloadLink.download = `steem-account-${data.accountName}.txt`;
+    downloadLink.style.display = 'none';
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
     
-    doc.save(`steem-account-${data.accountName}.pdf`);
+    setTimeout(() => {
+        URL.revokeObjectURL(textUrl);
+        document.body.removeChild(downloadLink);
+    }, 100);
 }
