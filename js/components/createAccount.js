@@ -29,7 +29,8 @@ function createAccountDialog() {
                     <input type="text" id="newAccountName" required 
                            placeholder="${t('enter_account_name')}"
                            pattern="[a-z0-9\\.-]+" 
-                           title="${t('account_name_requirements')}" />
+                           title="${t('account_name_requirements')}"
+                           oninput="this.value = this.value.toLowerCase()" />
                 </div>
                 <div class="buttons-container">
                     <button type="submit" class="action-btn" id="createAccountBtn">${t('create_account')}</button>
